@@ -5,6 +5,7 @@
 import { LitElement, html, css } from "lit";
 import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
+import '@haxtheweb/scroll-button/scroll-button.js';
 
 /**
  * `portfolio-very-theme`
@@ -60,16 +61,24 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
       h3 span {
         font-size: var(--portfolio-very-theme-label-font-size, var(--ddd-font-size-s));
       }
+      scroll-button {
+        position: fixed;
+        bottom: 20px;
+        right: 40px;
+        background-color: var(--ddd-theme-primary);
+        color: blue;
+      }
     `];
   }
 
   // Lit render the HTML
   render() {
     return html`
-<div class="wrapper">
-  <h3><span>${this.t.title}:</span> ${this.title}</h3>
-  <slot></slot>
-</div>`;
+      <div class="wrapper">
+        <h3><span>${this.t.title}:</span> ${this.title}</h3>
+        <slot></slot>
+        <scroll-button></scroll-button>
+      </div>`;
   }
 
   /**
