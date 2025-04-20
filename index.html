@@ -45,11 +45,54 @@
 
 <body>
   <div id="container">
-    <portfolio-very-theme></portfolio-very-theme>
-    <div class="title-bar">
-    <scroll-button></scroll-button>
-    <!-- this is going to do whatever the tag's defaults are -->
+    <portfolio-very-theme>
+      <banner>
+        <a href="#1">About</a>
+        <a href="#2">Research</a>
+        <a href="#3">Presentations & Publications</a>
+        <a href="#4">Professsional Development</a>
+        <scroll-button></scroll-button>
+      </banner>
+        <a name="1"></a>
+      <div>
+        <h1>About</h1>
+        <p>Brief professional bio (research focus, academic background, key achievements).</p>
+        <p>Professional headshot.</p>
+        <p>Concise mission statements or research interests</p>
+      </div>
+        <a name="2"></a>
+      <div class="blue">
+        <h1>Research</h1>
+        <p>Overview of research areas.</p>
+        <p>List of key projects (include brief summaries and outcomes).</p>
+        <p>Highlight publications (include links to journals or PDFs if allowed).</p>
+      </div>
+        <a name="3"></a>
+      <div class="green">
+        <h1>Presentations & Publications</h1>
+        <p>Peer-reviewered papers, book chapters, and reports.</p>
+        <p>Link to full-text articles if available.</p>
+        <p>Include citation information (APA/MLA format).
+        <p>Conference talks, seminars, and guest lectures.</p>
+        <p>Include event name, date, and title.</p>
+        <p>Link to slides or videos if available.</p>
+      </div>
+        <a name="4"></a>
+      <div class="red">
+        <h1>Professional Development</h1>
+        <h2>TEACHING / MENTORING</h2>
+        <p>Courses taught, teaching philosophy.</p>
+        <p>Student mentorship, supervision, and collaborations</p>
+        <h2>AWARDS & GRANTS</h2>
+        <p>Felloswhips, research grants, and academic awards.</p>
+        <p>Include funding organizations and amounts (if appropiate).</p>
+        <h2> MEDIA & OUTREACH (OPTIONAL, FOR VISIBILITY)</h2>
+        <p>Press coverage, interviews, and podcasts.</p>
+        <p>Public outreach activities (blogs, op-eds, etc.)</p>
+    </portfolio-very-theme>
   </div>
+    <!-- this is going to do whatever the tag's defaults are -->
+
   <script type="module" src="./portfolio-very-theme.js"></script>
 
 

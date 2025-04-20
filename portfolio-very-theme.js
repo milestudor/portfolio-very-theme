@@ -25,7 +25,7 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
     this.t = this.t || {};
     this.t = {
       ...this.t,
-      title: "Title",
+      title: "Portfolio",
     };
     this.registerLocalization({
       context: this,
@@ -68,6 +68,27 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
         background-color: var(--ddd-theme-primary);
         color: blue;
       }
+      .banner a{
+        border: 2px darkblue;
+        padding: 10 px;
+        display: inline-block;
+        margin: 10px;
+        background-color: darkgray;
+        color: blue;
+        text-decoration: none;
+      }
+      .banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #00000066;
+        position: fixed;
+        top: 50px;
+        left: 0;
+        height: 100px;
+        right: 0;
+        z-index: 1;
+      }
     `];
   }
 
@@ -75,10 +96,10 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
   render() {
     return html`
       <div class="wrapper">
-        <h3><span>${this.t.title}:</span> ${this.title}</h3>
+        <h3><span>${this.t.title}</span> ${this.title}</h3>
         <slot></slot>
-        <scroll-button></scroll-button>
       </div>`;
+    
   }
 
   /**
