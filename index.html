@@ -39,13 +39,24 @@
       --scroll-button-color: darkcyan;
       --scroll-button-position: 20px;
     }
+    #banner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #00000066;
+      position: fixed;
+      top: 50px;
+      left: 0;
+      height: 100px;
+      right: 0;
+      z-index: 1;
+    }
   </style>
   <title>portfolio-very-theme</title>
 </head>
 
 <body>
   <div id="container">
-    <portfolio-very-theme>
       <banner>
         <a href="#1">About</a>
         <a href="#2">Research</a>
@@ -53,6 +64,7 @@
         <a href="#4">Professsional Development</a>
         <scroll-button></scroll-button>
       </banner>
+      <portfolio-very-theme>
         <a name="1"></a>
       <div>
         <h1>About</h1>
@@ -60,6 +72,8 @@
         <p>Professional headshot.</p>
         <p>Concise mission statements or research interests</p>
       </div>
+    </portfolio-very-theme>
+      <portfolio-very-theme>
         <a name="2"></a>
       <div class="blue">
         <h1>Research</h1>
@@ -67,6 +81,8 @@
         <p>List of key projects (include brief summaries and outcomes).</p>
         <p>Highlight publications (include links to journals or PDFs if allowed).</p>
       </div>
+    </portfolio-very-theme>
+      <portfolio-very-theme>
         <a name="3"></a>
       <div class="green">
         <h1>Presentations & Publications</h1>
@@ -77,6 +93,8 @@
         <p>Include event name, date, and title.</p>
         <p>Link to slides or videos if available.</p>
       </div>
+    </portfolio-very-theme>
+      <portfolio-very-theme>
         <a name="4"></a>
       <div class="red">
         <h1>Professional Development</h1>

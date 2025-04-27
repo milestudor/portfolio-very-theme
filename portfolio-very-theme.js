@@ -25,7 +25,7 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
     this.t = this.t || {};
     this.t = {
       ...this.t,
-      title: "Portfolio",
+      title: "",
     };
     this.registerLocalization({
       context: this,
