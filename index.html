@@ -39,41 +39,36 @@
       --scroll-button-color: darkcyan;
       --scroll-button-position: 20px;
     }
-    #banner {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #00000066;
-      position: fixed;
-      top: 50px;
-      left: 0;
-      height: 100px;
-      right: 0;
-      z-index: 1;
+    p {
+      padding-top: 10px;
+      padding-left: 30px;
     }
   </style>
   <title>portfolio-very-theme</title>
 </head>
 
+<script type="module" src="./portfolio-very-theme.js"></script>
+<script type="module" src="./portfolio-screen.js"></script>
+<script type="module" src="./portfolio-topbar.js"></script>
 <body>
   <div id="container">
-      <banner>
-        <a href="#1">About</a>
-        <a href="#2">Research</a>
-        <a href="#3">Presentations & Publications</a>
-        <a href="#4">Professsional Development</a>
-        <scroll-button></scroll-button>
-      </banner>
       <portfolio-very-theme>
+        <portfolio-topbar>
+          <a href="#1">About</a>
+          <a href="#2">Research</a>
+          <a href="#3">Presentations & Publications</a>
+          <a href="#4">Professsional Development</a>
+          <scroll-button></scroll-button>
+        </portfolio-topbar>
+      <portfolio-screen style="--portfolio-screen-background: lightblue;">
         <a name="1"></a>
       <div>
         <h1>About</h1>
-        <p>Brief professional bio (research focus, academic background, key achievements).</p>
-        <p>Professional headshot.</p>
-        <p>Concise mission statements or research interests</p>
+        <p>I'm Miles and I plan on majoring in Enterprise Technology Integration.</p>
+        image=""
       </div>
-    </portfolio-very-theme>
-      <portfolio-very-theme>
+    </portfolio-screen>
+    <portfolio-screen style="--portfolio-screen-background: lightgreen;">
         <a name="2"></a>
       <div class="blue">
         <h1>Research</h1>
@@ -81,8 +76,8 @@
         <p>List of key projects (include brief summaries and outcomes).</p>
         <p>Highlight publications (include links to journals or PDFs if allowed).</p>
       </div>
-    </portfolio-very-theme>
-      <portfolio-very-theme>
+    </portfolio-screen>
+    <portfolio-screen style="--portfolio-screen-background: lightcoral;">
         <a name="3"></a>
       <div class="green">
         <h1>Presentations & Publications</h1>
@@ -93,8 +88,8 @@
         <p>Include event name, date, and title.</p>
         <p>Link to slides or videos if available.</p>
       </div>
-    </portfolio-very-theme>
-      <portfolio-very-theme>
+    </portfolio-screen>
+    <portfolio-screen style="--portfolio-screen-background: darkgray;">
         <a name="4"></a>
       <div class="red">
         <h1>Professional Development</h1>
@@ -107,11 +102,10 @@
         <h2> MEDIA & OUTREACH (OPTIONAL, FOR VISIBILITY)</h2>
         <p>Press coverage, interviews, and podcasts.</p>
         <p>Public outreach activities (blogs, op-eds, etc.)</p>
+      </portfolio-screen>
     </portfolio-very-theme>
   </div>
     <!-- this is going to do whatever the tag's defaults are -->
-
-  <script type="module" src="./portfolio-very-theme.js"></script>
 
 
   <!-- Take HAX, the Web and you further down the rabbit hole -->

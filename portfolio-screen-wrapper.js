@@ -1,3 +1,4 @@
+
 /**
  * Copyright 2025 milestudor
  * @license Apache-2.0, see LICENSE for full text.
@@ -5,28 +6,24 @@
 import { LitElement, html, css } from "lit";
 import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
-import '@haxtheweb/scroll-button/scroll-button.js';
 
 /**
- * `portfolio-very-theme`
+ * `portfolio-screen-wrapper`
  * 
  * @demo index.html
- * @element portfolio-very-theme
+ * @element portfolio-page
  */
-export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
+export class PortfolioScreenWrapper extends DDDSuper(I18NMixin(LitElement)) {
 
   static get tag() {
-    return "portfolio-very-theme";
+    return "portfolio-scren-wrapper";
   }
-
+  
   constructor() {
     super();
-    this.title = "";
-    this.t = this.t || {};
-    this.t = {
-      ...this.t,
-      title: "",
-    };
+    this.title="";
+    this.breakpoint="";
+   
     this.registerLocalization({
       context: this,
       localesPath:
@@ -49,46 +46,25 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
     return [super.styles,
     css`
       :host {
-        display: block;
-        color: var(--ddd-theme-primary);
+      
         background-color: var(--ddd-theme-accent);
         font-family: var(--ddd-font-navigation);
-      }
-      .wrapper {
-        margin: var(--ddd-spacing-2);
-        padding: var(--ddd-spacing-4);
-      }
-      h3 span {
-        font-size: var(--portfolio-very-theme-label-font-size, var(--ddd-font-size-s));
-      }
-      scroll-button {
-        position: fixed;
-        bottom: 20px;
-        right: 40px;
-        background-color: var(--ddd-theme-primary);
-        color: blue;
-      }
-      portfolio-topbar {
-        display: block;
-        position: fixed;
-        width: 300px;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        color: var(--portfolio-topbar-color, var(--ddd-theme-primary));
+        display: inline-block;
       }
     `];
   }
 
-  // Lit render the HTML
+
   render() {
     return html`
       <div class="wrapper">
-        <h3><span>${this.t.title}</span> ${this.title}</h3>
-        <slot></slot>
+        <slot>
+
+        </slot>
       </div>`;
-    
   }
+
+ 
 
   /**
    * haxProperties integration via file reference
@@ -99,4 +75,4 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
   }
 }
 
-globalThis.customElements.define(PortfolioVeryTheme.tag, PortfolioVeryTheme);
+globalThis.customElements.define(PortfolioScreenWrapper.tag, PortfolioScreenWrapper);
