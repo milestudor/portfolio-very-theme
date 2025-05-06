@@ -67,10 +67,22 @@ export class PortfolioTopbar extends DDDSuper(I18NMixin(LitElement)) {
     return html`
       <div class="wrapper">
         <div class="links">
-          <slot></slot>
+          <a @click=${() => this.scrollTo("#screen-1")}>About</a>
+          <a @click=${() => this.scrollTo("#screen-2")}>Research</a>
+          <a @click=${() => this.scrollTo("#screen-3")}>Presentations & Publications</a>
+          <a @click=${() => this.scrollTo("#screen-4")}>Professional Development</a>
+          <scroll-button></scroll-button>
         </div>
       </div>`;
   }
+
+  scrollTo(id) {
+    const element = this.shadowRoot.querySelector(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      window.location.hash = id;
+    }
+  } 
 
 }
 

@@ -43,6 +43,30 @@
       padding-top: 10px;
       padding-left: 30px;
     }
+    .about-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+    .about-img {
+      max-width: 300px;
+      height: auto;
+      border-radius: var(--ddd-radius-lg);
+      box-shadow: var(--ddd-boxShadow-sm);
+    }
+    .about-text {
+      max-width: 600px;
+      color: var(---ddd-primary-17);
+    }
+    .research-img {
+      max-width: 300px;
+      height: auto;
+      border-radius: var(--ddd-radius-lg);
+      box-shadow: var(--ddd-boxShadow-sm);
+    }
   </style>
   <title>portfolio-very-theme</title>
 </head>
@@ -60,47 +84,42 @@
           <a href="#4">Professsional Development</a>
           <scroll-button></scroll-button>
         </portfolio-topbar>
-      <portfolio-screen style="--portfolio-screen-background: lightblue;">
+      <portfolio-screen id="screen-1" style="--portfolio-screen-background: navy;">
         <a name="1"></a>
-      <div>
-        <h1>About</h1>
-        <p>I'm Miles and I plan on majoring in Enterprise Technology Integration.</p>
+      <div class="about-content">
+        <img src="https://media.licdn.com/dms/image/v2/D5603AQGcdnBpDsc5Zw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1726694758512?e=1752105600&v=beta&t=_SebRt8jK2zgADkcrDiKJX8h_wKQCyTAduvPj1pUmbE" class="about-img"/>
+        <div class="about-text">
+          <h1>About</h1>
+          <p>I'm Miles and I plan on majoring in Enterprise Technology Integration. I hope to learn and apply the skills that I acquire into the real world and help make an impact.</p>
+        </div>
       </div>
     </portfolio-screen>
-    <portfolio-screen style="--portfolio-screen-background: lightgreen;">
+    <portfolio-screen id="screen-2" style="--portfolio-screen-background: rgb(8, 8, 188);">
         <a name="2"></a>
       <div class="blue">
+        <img src="data:image/jpeg;base64,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" class="research-img"/>
         <h1>Research</h1>
-        <p>Overview of research areas.</p>
-        <p>List of key projects (include brief summaries and outcomes).</p>
-        <p>Highlight publications (include links to journals or PDFs if allowed).</p>
+        <p>I'm not too sure if or what I would be most interested to pursue research in. However, in the past i've done projects involving machine learning within workspaces and I could be interested as to what the benefits to this may be if there are any.</p>
+        <p>I hope to get involved in more projects soon and expand my knowledge to try and be the best I can.</p>
       </div>
     </portfolio-screen>
-    <portfolio-screen style="--portfolio-screen-background: lightcoral;">
+    <portfolio-screen id="screen-3" style="--portfolio-screen-background: skyblue;">
         <a name="3"></a>
       <div class="green">
         <h1>Presentations & Publications</h1>
-        <p>Peer-reviewered papers, book chapters, and reports.</p>
-        <p>Link to full-text articles if available.</p>
-        <p>Include citation information (APA/MLA format).
-        <p>Conference talks, seminars, and guest lectures.</p>
-        <p>Include event name, date, and title.</p>
-        <p>Link to slides or videos if available.</p>
+        <p>I've written many papers and had a couple presenations throughout my life and I know I still have many more coming. </p>
+        <p>Some of my favorite presentations in the past have been those for my AP research class and I also enjoy doing the research to make a better paper.</p>
       </div>
     </portfolio-screen>
-    <portfolio-screen style="--portfolio-screen-background: darkgray;">
+    <portfolio-screen id="screen-4" style="--portfolio-screen-background: rgb(61, 61, 228);">
         <a name="4"></a>
       <div class="red">
         <h1>Professional Development</h1>
-        <h2>TEACHING / MENTORING</h2>
-        <p>Courses taught, teaching philosophy.</p>
-        <p>Student mentorship, supervision, and collaborations</p>
+        <p>While I was still in high school I was a youth basketball camp counselor and helped teach basics to camp members.</p>
+        <p>This is how I took part in someone's development and I hope I was able to pass on skills that helped them either in basketball or with their own lives.</p>
         <h2>AWARDS & GRANTS</h2>
-        <p>Felloswhips, research grants, and academic awards.</p>
-        <p>Include funding organizations and amounts (if appropiate).</p>
-        <h2> MEDIA & OUTREACH (OPTIONAL, FOR VISIBILITY)</h2>
-        <p>Press coverage, interviews, and podcasts.</p>
-        <p>Public outreach activities (blogs, op-eds, etc.)</p>
+        <p>I actually won my school's NAACP scholarship award but had no clue about it until the day of graduation. Very thankful but an email from them would've been great too.</p>
+        <p>Won a good amount of trophies in my athletic career and will definitely be winning more in my future mens league teams.</p>
       </portfolio-screen>
     </portfolio-very-theme>
   </div>
